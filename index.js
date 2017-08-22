@@ -38,7 +38,9 @@ var WebDriverInstance = function (baseBrowserDecorator, args, logger) {
     case 'tags':
       break;
     case 'version':
-      value = value + ''; // for use Selenium Grid 3.x.x, this field must be string.
+      if (!isNaN(value)) {
+        value = value + ''; // for use Selenium Grid 3.x.x, this field must be string.
+      }
       break;
     case 'config':
       // ignore
