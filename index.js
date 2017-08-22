@@ -7,13 +7,13 @@ var WebDriverInstance = function (baseBrowserDecorator, args, logger) {
   var os = require('os');
   var ip = require('ip');
   var self = this;
-  
+
   var config = args.config || {
     hostname: '127.0.0.1',
     port: 4444,
     remoteHost: false
   };
-  
+
   // Intialize with default values
   var spec = {
     browserName: args.browserName,
@@ -38,6 +38,7 @@ var WebDriverInstance = function (baseBrowserDecorator, args, logger) {
     case 'tags':
       break;
     case 'version':
+      value = value + ''; // for use Selenium Grid 3.x.x, this field must be string.
       break;
     case 'config':
       // ignore
