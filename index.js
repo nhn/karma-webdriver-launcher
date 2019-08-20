@@ -90,7 +90,7 @@ var WebDriverInstance = function (baseBrowserDecorator, args, logger) {
 
     if (config.remoteHost) {
         ipAddr = ip.address();
-	    url = url.replace('localhost', ipAddr);
+        url = url.replace('localhost', ipAddr);
         log.debug('Remote host feature worked: ' + ipAddr);
     }
 
@@ -122,7 +122,9 @@ var WebDriverInstance = function (baseBrowserDecorator, args, logger) {
         });
 
         // Now give up and quit.
-        self._process.kill();
+        if (!!self._process) {
+          self._process.kill();
+        }
       });
     });
 
