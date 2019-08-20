@@ -2,6 +2,7 @@
 
 A plugin for Karma 0.12 to launch WebDriver instances
 
+A plugin for Karma to launch Remote WebDriver instances.
 also, you can use remote WebDriver instance by setting true the "remoteHost" options.
 
 see below.
@@ -38,7 +39,7 @@ module.exports = function(karma) {
           base: 'WebDriver',
           config: webdriverConfig,
           browserName: 'internet explorer',
-          platform: 'Windows XP',
+          platform: 'XP',
           version: '10',
           'x-ua-compatible': 'IE=EmulateIE7',
           name: 'Karma',
