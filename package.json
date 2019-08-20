@@ -1,6 +1,6 @@
 {
   "name": "karma-webdriver-launcher",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A Karma plugin. Launcher for Remote WebDriver instances.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/karma-runner/karma-webdriver-launcher.git"
+    "url": "git://github.com/nhn/karma-webdriver-launcher.git"
   },
   "keywords": [
     "karma-plugin",
@@ -40,7 +40,8 @@
     "persidskiy <persidskiy@yandex-team.ru>"
   ],
   "dependencies": {
-    "wd": "^1.11.0"
+    "wd": "^1.11.0",
+    "ip": "^0.3.2"
   },
   "devDependencies": {
     "grunt": "~1.0.3",
